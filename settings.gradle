@@ -1,0 +1,35 @@
+pluginManagement {
+    repositories {
+        google()
+        mavenCentral()
+        gradlePluginPortal()
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url "https://jitpack.io" }
+        maven {
+            url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
+        }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        maven { url 'https://maven.aliyun.com/nexus/content/groups/public/' }
+        maven { url 'https://maven.aliyun.com/nexus/content/repositories/jcenter' }
+        maven { url "https://jitpack.io" }
+        maven {
+            url "https://repo.eclipse.org/content/repositories/paho-snapshots/"
+        }
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+rootProject.name = "uhf_uart"
+include ':app'
